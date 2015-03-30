@@ -2,7 +2,8 @@ body {
   background-color: #FFF;
   margin: 0;
   padding: 0;
-  font-family: Ubuntu;
+  font-family: Droid Sans;
+  font-size: 12px;
 }
 
 a {
@@ -19,6 +20,7 @@ a {
 .table tr > * {
   text-align: left;
   border-bottom: 1px solid #DDD;
+  font-size: 12px;
 }
 
 .form-horizontal label {
