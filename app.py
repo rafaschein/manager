@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort, request
+from flask import Flask, render_template, abort, request, redirect
 app = Flask(__name__)
 
 tasks = [
@@ -35,7 +35,7 @@ def create():
           'done': False}
 
   tasks.append(task)
-  return render_template("task/list.html", tasks=tasks)
+  return redirect("/tasks", code=302)
 
 @app.route("/task/edit/<int:task_id>", methods=['GET'])
 def edit(task_id):
@@ -47,7 +47,7 @@ def update(task_id):
   key = [int(i) for i, task in enumerate(tasks) if task['id'] == task_id]
   tasks[key[0]]['title']       = request.form['title']
   tasks[key[0]]['description'] = request.form['description']
-  return render_template("task/list.html", tasks=tasks)
+  return redirect("/tasks", code=302)
 
 @app.route("/task/remove/<int:task_id>", methods=['GET'])
 def remove(task_id):
@@ -55,7 +55,7 @@ def remove(task_id):
   if len(task) == 0:
     abort(404)
   tasks.remove(task[0])
-  return render_template("task/list.html", tasks=tasks)
+  return redirect("/tasks", code=302)
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=5000, debug=True)
