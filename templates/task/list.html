@@ -1,0 +1,29 @@
+{% extends "default.html" %}
+{% block content %}
+<a class="button" href="/task/new">New</a>
+<a class="button" href="/tasks">Update List</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>TITLE</th>
+      <th>DESCRIPTION</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in tasks %}
+    <tr>
+      <td>{{task.id}}</td>
+      <td>{{task.title}}</td>
+      <td>{{task.description}}</td>
+      <td>
+        <a href="/task/view/{{task.id}}">View</a>
+        <a href="/task/edit/{{task.id}}">Update</a>
+        <a href="/task/remove/{{task.id}}">Remove</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+<table>
+  {% endblock %}

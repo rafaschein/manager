@@ -1,0 +1,17 @@
+{% extends "default.html" %}
+{% block content %}
+<div class="view">
+  <div class="view-box">
+    <strong>ID:</strong>
+    {{task.id}}
+  </div>
+  <div class="view-box">
+    <strong>TITLE:</strong>
+    {{task.title}}
+  </div>
+  <div class="view-box">
+    <strong>DESCRIPTION:</strong>
+    {{task.description}}
+  </div>
+</div>
+{% endblock %}

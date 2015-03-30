@@ -1,0 +1,9 @@
+<html>
+  <head>
+    <title>{% block title %} Manager {% endblock %}</title>
+    <link type="text/css" href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+</html>

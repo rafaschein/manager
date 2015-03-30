@@ -1,0 +1,42 @@
+body {
+  background-color: #FFF;
+  margin: 0;
+  padding: 0;
+  font-family: Ubuntu;
+}
+
+a {
+  display: block;
+}
+
+.table {
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 5px;
+  width: 100%;
+}
+
+.table tr > * {
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+.form-horizontal label {
+  width: 100px;
+  display: inline-block;
+}
+
+.form-horizontal .form-group {
+  margin-bottom: 10px;
+}
+
+.button {
+  border: 1px solid #DDD;
+  background-color: #CCC;
+  border-radius: 3px;
+  text-decoration: none;
+  width: auto;
+  display: inline-block;
+  padding: 5px 20px;
+  color: #000;
+}

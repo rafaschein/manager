@@ -1,0 +1,22 @@
+{% extends "default.html" %}
+{% block content %}
+<a class="button" href="/tasks">Back</a>
+<form class="form-horizontal" action="/task/update/{{task.id}}" method="POST">
+  <!-- Title -->
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" value="{{task.title}}">
+  </div>
+
+  <!-- Description -->
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" value="{{task.description}}">
+  </div>
+
+  <!-- Submit -->
+  <div class="form-group">
+    <button type="submit">Sign in</button>
+  </div>
+</form>
+{% endblock %}
